@@ -3,7 +3,7 @@ pipeline {
         stages {
             stage ('git checkout') {
                 steps {
-                    git 'https://github.com/mani-2022/simple-maven-project.git'
+                    checkout([$class: 'GitSCM', branches: [[name: '*/master']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/mani-2022/simple-maven-project.git']]])
                 }
             }
         }
