@@ -32,8 +32,13 @@
       <plugin>
         <!-- Build an executable WAR -->
         <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-war-plugin</artifactId>
-        <version>3.3.1</version>
+        <plugin>
+    <artifactId>maven-war-plugin</artifactId>
+    <version>3.3.1</version>
+    <configuration>
+        <failOnMissingWebXml>false</failOnMissingWebXml>
+    </configuration>
+        </plugin>
         <configuration>
           <archive>
             <manifest>
